@@ -383,7 +383,10 @@ MonoBehaviour:
   checkRadius: 0.3
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
+  jumpTime: 0.35
+  fallMultiplier: 4
+  lowJumpMultiplier: 0
 --- !u!50 &1483034044
 Rigidbody2D:
   serializedVersion: 4
