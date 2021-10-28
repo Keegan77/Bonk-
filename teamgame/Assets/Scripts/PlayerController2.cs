@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController2 : MonoBehaviour
 {
     [Header("Components")]
     private Rigidbody2D rb;
@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
     [Header("Layer Mask")]
     private bool isGrounded;
     public Transform feetPos;
-    public Transform headPos;
     public float checkRadius;
     public LayerMask whatIsGround;
 
@@ -35,18 +34,12 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        moveInput = Input.GetAxisRaw("Horizontal");
+        moveInput = Input.GetAxisRaw("Horizontal2");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
     }
     void Update()
     {
-        if (transform.position.y < -5)
-        {
-            transform.position = new Vector3(transform.position.x, 5, transform.position.z);
-        }
-
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
-
         if (moveInput > 0)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
@@ -63,26 +56,26 @@ public class PlayerController : MonoBehaviour
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
 
-        else if (rb.velocity.y > 0 && Input.GetKey(KeyCode.Space))
+        else if (rb.velocity.y > 0 && Input.GetKey(KeyCode.Keypad4))
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
         //fixed double jump bug
-        if (Input.GetKeyUp(KeyCode.Space))
+        if (Input.GetKeyUp(KeyCode.Keypad4))
         {
             isJumping = false;
         }
 
         //lets player jump
 
-        if (isGrounded == true && Input.GetKeyDown("space") && isJumping == false)
-        { 
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Keypad4) && isJumping == false)
+        {
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
         }
-        //makes you jump higher when you hold down space
-        if (Input.GetKey(KeyCode.Space) && isJumping == true)
+        //makes you jump higher when you hold down 4
+        if (Input.GetKey(KeyCode.Keypad4) && isJumping == true)
         {
             if (jumpTimeCounter > 0)
             {
@@ -90,7 +83,7 @@ public class PlayerController : MonoBehaviour
                 jumpTimeCounter -= Time.deltaTime;
             }
             else
-            { 
+            {
                 isJumping = false;
             }
         }
