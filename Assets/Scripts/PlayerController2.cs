@@ -13,6 +13,7 @@ public class PlayerController2 : MonoBehaviour
     [Header("Layer Mask")]
     private bool isGrounded;
     public Transform feetPos;
+    public Transform headPos;
     public float checkRadius;
     public LayerMask whatIsGround;
 
@@ -24,6 +25,10 @@ public class PlayerController2 : MonoBehaviour
     [Header("fall physics")]
     public float fallMultiplier;
     public float lowJumpMultiplier;
+
+    private float ylimit = 7;
+    private float xlimit = 9.5f;
+    public float maxYVelocity = -50;
     //Gets Rigidbody component
     void Start()
     {
@@ -39,7 +44,26 @@ public class PlayerController2 : MonoBehaviour
     }
     void Update()
     {
+        //Debug.Log(rb.velocity.y);
+        if (rb.velocity.y < maxYVelocity)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, maxYVelocity);
+        }
+        if (transform.position.y < -ylimit)
+        {
+            transform.position = new Vector3(transform.position.x, ylimit, transform.position.z);
+        }
+        if (transform.position.x > xlimit)
+        {
+            transform.position = new Vector3(-xlimit, transform.position.y, transform.position.z);
+        }
+        else if (transform.position.x < -xlimit)
+        {
+            transform.position = new Vector3(xlimit, transform.position.y, transform.position.z);
+        }
+
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+
         if (moveInput > 0)
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
@@ -74,13 +98,13 @@ public class PlayerController2 : MonoBehaviour
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
         }
-        //makes you jump higher when you hold down 4
+        //makes you jump higher when you hold down space
         if (Input.GetKey(KeyCode.Keypad4) && isJumping == true)
         {
             if (jumpTimeCounter > 0)
             {
-                rb.velocity = Vector2.up * jumpForce;
-                jumpTimeCounter -= Time.deltaTime;
+                //rb.velocity = Vector2.up * jumpForce;
+                //jumpTimeCounter -= Time.deltaTime;
             }
             else
             {

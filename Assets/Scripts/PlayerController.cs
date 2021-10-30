@@ -25,6 +25,10 @@ public class PlayerController : MonoBehaviour
     [Header("fall physics")]
     public float fallMultiplier;
     public float lowJumpMultiplier;
+
+    private float ylimit = 7;
+    private float xlimit = 9.5f;
+    public float maxYVelocity = -50;
     //Gets Rigidbody component
     void Start()
     {
@@ -40,9 +44,21 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
-        if (transform.position.y < -5)
+        //Debug.Log(rb.velocity.y);
+        if (rb.velocity.y < maxYVelocity)
         {
-            transform.position = new Vector3(transform.position.x, 5, transform.position.z);
+            rb.velocity = new Vector2(rb.velocity.x, maxYVelocity);
+        }
+        if (transform.position.y < -ylimit)
+        {
+            transform.position = new Vector3(transform.position.x, ylimit, transform.position.z);
+        }
+        if (transform.position.x > xlimit)
+        {
+            transform.position = new Vector3(-xlimit, transform.position.y, transform.position.z);
+        } else if (transform.position.x < -xlimit)
+        {
+            transform.position = new Vector3(xlimit, transform.position.y, transform.position.z);
         }
 
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
@@ -75,7 +91,7 @@ public class PlayerController : MonoBehaviour
 
         //lets player jump
 
-        if (isGrounded == true && Input.GetKeyDown("space") && isJumping == false)
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) && isJumping == false)
         { 
             isJumping = true;
             jumpTimeCounter = jumpTime;
@@ -86,8 +102,8 @@ public class PlayerController : MonoBehaviour
         {
             if (jumpTimeCounter > 0)
             {
-                rb.velocity = Vector2.up * jumpForce;
-                jumpTimeCounter -= Time.deltaTime;
+                //rb.velocity = Vector2.up * jumpForce;
+                //jumpTimeCounter -= Time.deltaTime;
             }
             else
             { 
