@@ -31,6 +31,14 @@ public class FootHitCollision : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player1 == null)
+        {
+            player1 = GameObject.FindGameObjectWithTag("Player1");
+        }
+        if (player2 == null)
+        {
+            player2 = GameObject.FindGameObjectWithTag("Player2");
+        }
         
     }
     private void OnTriggerEnter2D(Collider2D collision)
@@ -43,6 +51,7 @@ public class FootHitCollision : MonoBehaviour
         {
             gameManager.p2Score++;
             p2rb.velocity = Vector2.up * jumpForce;
+            Destroy(player1);
             //p2rb.velocity = new Vector2((p1transform.position.x + p2transform.position.x) * 10, p2rb.velocity.y);
             //player2.transform.Translate(new Vector3((p1transform.position.x + p2transform.position.x), p2transform.position.y), 0);
         }
@@ -51,6 +60,7 @@ public class FootHitCollision : MonoBehaviour
         {
             gameManager.p1Score++;
             p1rb.velocity = Vector2.up * jumpForce;
+            Destroy(player2);
             //p1rb.velocity = new Vector2((p1transform.position.x + p2transform.position.x) * 10, p1rb.velocity.y);
             //player1.transform.Translate(new Vector3((p1transform.position.x + p2transform.position.x), p1transform.position.y), 0);
         }
