@@ -30,6 +30,9 @@ public class PlayerController2 : MonoBehaviour
     private float xlimit = 9.5f;
     public float maxYVelocity = -50;
     public bool hasPowerup=false;
+
+    public Transform player2Transform;
+    public Transform player1Transform;
     //Gets Rigidbody component
     void Start()
     {
@@ -58,8 +61,32 @@ public class PlayerController2 : MonoBehaviour
             Debug.Log("Power up Pick up!");
             
     }   }
+    private void OnCollisonEnter2D(Collider collision)
+    {
+        Debug.Log("Test");
+        if (collision.gameObject.CompareTag("Player1")&& hasPowerup)
+        {
+            
+            Rigidbody2D Player1Rb= collision.gameObject.GetComponent<Rigidbody2D>();
+            if (player2Transform.position.x > player1Transform.position.x) {
+                Player1Rb.velocity = Vector2.left * 19;
+            }
+            else if (player2Transform.position.x < player1Transform.position.x) {
+                Player1Rb.velocity = Vector2.right * 19;
+            }
+            //Vector2 awayPlayer2= collision.gameObject.transform.position+transform.position;
+            //Player1Rb.AddForce(awayPlayer2*100,ForceMode2D.Impulse);
+            //Player1Rb.velocity
+        }
+    }
+    
     void Update()
     {
+        //powerups
+        if (hasPowerup) {
+
+        }
+        
         //Debug.Log(rb.velocity.y);
         if (rb.velocity.y < maxYVelocity)
         {

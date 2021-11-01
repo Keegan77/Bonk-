@@ -287,6 +287,8 @@ MonoBehaviour:
   lowJumpMultiplier: 5
   maxYVelocity: -30
   hasPowerup: 1
+  player2Transform: {fileID: 2213780174652651887}
+  player1Transform: {fileID: 1923887814710118834, guid: 53dff2a7bd7cab94bb4ca12fb270a77c, type: 3}
 --- !u!114 &2213780174652651872
 MonoBehaviour:
   m_ObjectHideFlags: 0
