@@ -9,6 +9,9 @@ TagManager:
   - Player1
   - Player2
   - Platform
+  - Utele
+  - Btele
+  - Fireball
   layers:
   - Default
   - TransparentFX

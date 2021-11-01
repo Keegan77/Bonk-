@@ -29,10 +29,13 @@ public class PlayerController2 : MonoBehaviour
     private float ylimit = 7;
     private float xlimit = 9.5f;
     public float maxYVelocity = -50;
+    public bool hasPowerup=false;
     //Gets Rigidbody component
     void Start()
     {
+        
         rb = GetComponent<Rigidbody2D>();
+        hasPowerup=false;
     }
 
     //Moves player on x axis
@@ -42,6 +45,19 @@ public class PlayerController2 : MonoBehaviour
         moveInput = Input.GetAxisRaw("Horizontal2");
         rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
     }
+
+    //Fireball interation
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Fireball"))
+        {
+            hasPowerup=true;
+            
+            Destroy(other.gameObject);
+            
+            Debug.Log("Power up Pick up!");
+            
+    }   }
     void Update()
     {
         //Debug.Log(rb.velocity.y);

@@ -216,6 +216,7 @@ MonoBehaviour:
   fallMultiplier: 4
   lowJumpMultiplier: 5
   maxYVelocity: -30
+  hasPowerup: 1
 --- !u!114 &1923887814710118833
 MonoBehaviour:
   m_ObjectHideFlags: 0
