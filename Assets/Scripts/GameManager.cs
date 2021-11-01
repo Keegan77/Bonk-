@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     GameObject player1;
     GameObject player2;
+    public bool gameWon = false;
 
     public GameObject player1prefab;
     public GameObject player2prefab;
@@ -37,17 +38,22 @@ public class GameManager : MonoBehaviour
         p1ScoreText.text = $"P1: {p1Score}";
         p2ScoreText.text = $"P2: {p2Score}";
 
-        if (p1Score == p1scoreDeath + 1)
+        if (p1Score == p1scoreDeath + 1 && p1Score < 15)
         {
             //respawn player 2
             StartCoroutine(RespawnPlayer("Player 2"));
             p1scoreDeath = p1Score;
         }
-        if (p2Score == p2scoreDeath + 1)
+        if (p2Score == p2scoreDeath + 1 && p2Score < 15)
         {
             //respawn player 1
             StartCoroutine(RespawnPlayer("Player 1"));
             p2scoreDeath = p2Score;
+        }
+
+        if (p1Score == 15 || p2Score == 15)
+        {
+            gameWon = true;
         }
     }
     private IEnumerator RespawnPlayer(string player)
