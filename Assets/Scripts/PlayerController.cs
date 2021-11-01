@@ -29,6 +29,7 @@ public class PlayerController : MonoBehaviour
     private float ylimit = 7;
     private float xlimit = 9.5f;
     public float maxYVelocity = -50;
+
     //Gets Rigidbody component
     void Start()
     {
