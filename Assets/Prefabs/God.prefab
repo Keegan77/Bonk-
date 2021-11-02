@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8413446558891633485
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8413446558891633475}
+  - component: {fileID: 8413446558891633484}
+  m_Layer: 0
+  m_Name: God
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8413446558891633475
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8413446558891633485}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.37142584, y: 1.1736311, z: -17.408731}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8413446558891633484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8413446558891633485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ff434ba7d1d61f4b80a6f40d9cbf1bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameWon: 0
+  player1prefab: {fileID: 1923887814710118863, guid: 53dff2a7bd7cab94bb4ca12fb270a77c, type: 3}
+  player2prefab: {fileID: 2213780174652651882, guid: 0b3c2cdb6f1d93547b7b917a405af24f, type: 3}
+  Spawner1: {fileID: 0}
+  Spawner2: {fileID: 0}
+  p1Score: 0
+  p1scoreDeath: 0
+  p2Score: 0
+  p2scoreDeath: 0
+  p1ScoreText: {fileID: 0}
+  p2ScoreText: {fileID: 0}
