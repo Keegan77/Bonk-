@@ -7,7 +7,6 @@ public class CountDownTimer : MonoBehaviour
 {
     float currentTime;
     float startingTime = 3f;
-    bool spawn = false;
     int spawnInt;
 
     public Text pressAny;
