@@ -29,7 +29,7 @@ public class CountDownTimer : MonoBehaviour
     void Update()
     {
         currentTime -= Time.deltaTime;
-        print(currentTime);
+        //print(currentTime);
         if (currentTime > 1)
         {
             countdownText.text = currentTime.ToString("0");

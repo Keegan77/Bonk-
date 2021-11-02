@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+    float currentTime = .1f;
+
     public Text gameName;
     public Text pressAnyKey;
 
@@ -36,9 +39,21 @@ public class MenuController : MonoBehaviour
             gameName.gameObject.SetActive(false);
             pressAnyKey.gameObject.SetActive(false);
             menu = true;
+
         }
         if (menu)
         {
+            currentTime -= Time.deltaTime;
+            if (currentTime < 0)
+            {
+                if (Input.anyKeyDown && Input.GetKeyDown(KeyCode.W) != true && Input.GetKeyDown(KeyCode.A) != true && Input.GetKeyDown(KeyCode.S) != true && Input.GetKeyDown(KeyCode.D) != true && Input.GetKeyDown(KeyCode.LeftArrow) != true && Input.GetKeyDown(KeyCode.RightArrow) != true && Input.GetKeyDown(KeyCode.UpArrow) != true && Input.GetKeyDown(KeyCode.DownArrow) != true)
+                {
+                    SceneManager.LoadScene(selection + 1);
+                    
+                }
+            }
+
+            //print(currentTime);
             mapSelect.gameObject.SetActive(true);
             map1.gameObject.SetActive(true);
             map2.gameObject.SetActive(true);
@@ -80,6 +95,8 @@ public class MenuController : MonoBehaviour
             {
                 selection = mapcount;
             }
+
+
 
         }
     }
