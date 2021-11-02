@@ -249,9 +249,10 @@ MonoBehaviour:
   gameName: {fileID: 1008020456}
   pressAnyKey: {fileID: 2044303323}
   mapSelect: {fileID: 688591632}
-  map1: {fileID: 669673163}
-  map2: {fileID: 595461370}
-  map3: {fileID: 517786615}
+  maps:
+  - {fileID: 669673163}
+  - {fileID: 595461370}
+  - {fileID: 517786615}
   mapSelectBg: {fileID: 1384862836}
   currentSelection:
   - {fileID: 1759737304}
@@ -571,7 +572,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: clear skies
+  m_Text: cloudy skies
 --- !u!222 &669673164
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1239,7 +1240,7 @@ Transform:
   m_GameObject: {fileID: 1759737304}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -402.0091, y: -224.61, z: 0}
-  m_LocalScale: {x: 2.5622785, y: 0.4151725, z: 1.7560699}
+  m_LocalScale: {x: 2.7758906, y: 0.4151725, z: 1.7560699}
   m_Children: []
   m_Father: {fileID: 121439733}
   m_RootOrder: 7

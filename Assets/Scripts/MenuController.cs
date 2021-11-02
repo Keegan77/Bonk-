@@ -12,9 +12,7 @@ public class MenuController : MonoBehaviour
     public Text pressAnyKey;
 
     public Text mapSelect;
-    public Text map1;
-    public Text map2;
-    public Text map3;
+    public Text[] maps;
 
     public GameObject mapSelectBg;
     public GameObject[] currentSelection;
@@ -55,9 +53,9 @@ public class MenuController : MonoBehaviour
 
             //print(currentTime);
             mapSelect.gameObject.SetActive(true);
-            map1.gameObject.SetActive(true);
-            map2.gameObject.SetActive(true);
-            map3.gameObject.SetActive(true);
+            maps[0].gameObject.SetActive(true);
+            maps[1].gameObject.SetActive(true);
+            maps[2].gameObject.SetActive(true);
             mapSelectBg.SetActive(true);
             switch (selection) {
                 case 0:
