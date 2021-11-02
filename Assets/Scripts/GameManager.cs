@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -55,6 +56,15 @@ public class GameManager : MonoBehaviour
         {
             gameWon = true;
         }
+
+        if (gameWon)
+        {
+            if (Input.anyKeyDown && Input.GetKeyDown(KeyCode.Space) != true && Input.GetKeyDown(KeyCode.W) != true && Input.GetKeyDown(KeyCode.A) != true && Input.GetKeyDown(KeyCode.S) != true && Input.GetKeyDown(KeyCode.D) != true && Input.GetKeyDown(KeyCode.Alpha4) != true && Input.GetKeyDown(KeyCode.UpArrow) != true && Input.GetKeyDown(KeyCode.LeftArrow) != true && Input.GetKeyDown(KeyCode.RightArrow) != true && Input.GetKeyDown(KeyCode.DownArrow) != true && Input.GetKeyDown(KeyCode.Keypad4) != true)
+            {
+                SceneManager.LoadScene(0);
+            }
+        }
+
     }
     private IEnumerator RespawnPlayer(string player)
     {
