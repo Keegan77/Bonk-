@@ -123,26 +123,26 @@ public class PlayerController2 : MonoBehaviour
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
 
-        else if (rb.velocity.y > 0 && Input.GetKey(KeyCode.Keypad4))
+        else if (rb.velocity.y > 0 && Input.GetKey(KeyCode.Alpha4))
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
         //fixed double jump bug
-        if (Input.GetKeyUp(KeyCode.Keypad4))
+        if (Input.GetKeyUp(KeyCode.Alpha4))
         {
             isJumping = false;
         }
 
         //lets player jump
 
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.Keypad4) && isJumping == false)
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Alpha4) && isJumping == false)
         {
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rb.velocity = Vector2.up * jumpForce;
         }
         //makes you jump higher when you hold down space
-        if (Input.GetKey(KeyCode.Keypad4) && isJumping == true)
+        if (Input.GetKey(KeyCode.Alpha4) && isJumping == true)
         {
             if (jumpTimeCounter > 0)
             {

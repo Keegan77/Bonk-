@@ -63,18 +63,21 @@ public class MenuController : MonoBehaviour
                     currentSelection[1].SetActive(false);
                     currentSelection[2].SetActive(false);
                     selectionPreviews[0].SetActive(true);
+                    selectionPreviews[1].SetActive(false);
                     break;
                 case 1:
                     currentSelection[0].SetActive(false);
                     currentSelection[1].SetActive(true);
                     currentSelection[2].SetActive(false);
                     selectionPreviews[0].SetActive(false);
+                    selectionPreviews[1].SetActive(true);
                     break;
                 case 2:
                     currentSelection[0].SetActive(false);
                     currentSelection[1].SetActive(false);
                     currentSelection[2].SetActive(true);
                     selectionPreviews[0].SetActive(false);
+                    selectionPreviews[1].SetActive(false);
                     break;
             }
             if (Input.GetKeyDown(KeyCode.S))

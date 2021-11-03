@@ -1,79 +1,55 @@
 fileFormatVersion: 2
-guid: 5735ddffe9ac9c7448a7cc2c25a189ce
+guid: d647be59718c38f4d8b01c7226808026
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5252155457958418534
-    second: dirt_tileset_now_finished_0
+      213: 2544453771455960170
+    second: tilesetcandy_0
   - first:
-      213: -5343682970246215929
-    second: dirt_tileset_now_finished_1
+      213: 1947200726215111677
+    second: tilesetcandy_1
   - first:
-      213: 1450250913036687193
-    second: dirt_tileset_now_finished_2
+      213: -3802831604406472538
+    second: tilesetcandy_2
   - first:
-      213: -7294608273741675715
-    second: dirt_tileset_now_finished_3
+      213: -1140614476667197215
+    second: tilesetcandy_3
   - first:
-      213: 4820756838356519391
-    second: dirt_tileset_now_finished_4
+      213: 2820589303251853545
+    second: tilesetcandy_4
   - first:
-      213: -4351694924265357956
-    second: dirt_tileset_now_finished_5
+      213: -3815266208229514225
+    second: tilesetcandy_5
   - first:
-      213: -4196604852052874611
-    second: dirt_tileset_now_finished_6
+      213: 4790401943082322628
+    second: tilesetcandy_6
   - first:
-      213: 8797246360539590766
-    second: dirt_tileset_now_finished_7
+      213: 3467568193742037522
+    second: tilesetcandy_7
   - first:
-      213: 8314004305031907818
-    second: dirt_tileset_now_finished_8
+      213: 7018402443491224617
+    second: tilesetcandy_8
   - first:
-      213: 7895971463676040578
-    second: dirt_tileset_now_finished_9
+      213: -8531312809952247901
+    second: tilesetcandy_9
   - first:
-      213: -8461457170553174806
-    second: dirt_tileset_now_finished_10
+      213: -7628536738575225281
+    second: tilesetcandy_10
   - first:
-      213: 1838590628113172742
-    second: dirt_tileset_now_finished_11
+      213: 2246448142104065044
+    second: tilesetcandy_11
   - first:
-      213: -4620411618272048119
-    second: dirt_tileset_now_finished_12
+      213: 7063153497066363820
+    second: tilesetcandy_12
   - first:
-      213: -2806994419610858540
-    second: dirt_tileset_now_finished_13
+      213: 8154824483410430452
+    second: tilesetcandy_13
   - first:
-      213: 7583965694641100785
-    second: dirt_tileset_now_finished_14
+      213: -6525446228564513284
+    second: tilesetcandy_14
   - first:
-      213: -566634779387129497
-    second: dirt_tileset_now_finished_15
-  - first:
-      213: -6829661203768633334
-    second: dirt_tileset_now_finished_16
-  - first:
-      213: -3949498725788085924
-    second: dirt_tileset_now_finished_17
-  - first:
-      213: 7214593194009982273
-    second: dirt_tileset_now_finished_18
-  - first:
-      213: 1031716158321745550
-    second: dirt_tileset_now_finished_19
-  - first:
-      213: 2933183649825822081
-    second: dirt_tileset_now_finished_20
-  - first:
-      213: -8412245027474200295
-    second: dirt_tileset_now_finished_21
-  - first:
-      213: -3526530672020280359
-    second: dirt_tileset_now_finished_22
-  - first:
-      213: -47968076291576115
-    second: dirt_tileset_now_finished_23
+      213: -8727257032711207400
+    second: tilesetcandy_15
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -140,7 +116,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -152,7 +128,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -163,7 +139,28 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: dirt_tileset_now_finished_0
+      name: tilesetcandy_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a64190b5937bf4320800000000000000
+      internalID: 2544453771455960170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tilesetcandy_1
       rect:
         serializedVersion: 2
         x: 32
@@ -177,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6689db8df8763e840800000000000000
-      internalID: 5252155457958418534
+      spriteID: df33f686eb8d50b10800000000000000
+      internalID: 1947200726215111677
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt_tileset_now_finished_1
+      name: tilesetcandy_2
       rect:
         serializedVersion: 2
         x: 64
@@ -198,14 +195,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7078b2e86ac67d5b0800000000000000
-      internalID: -5343682970246215929
+      spriteID: 6a039b6ddc0a93bc0800000000000000
+      internalID: -3802831604406472538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt_tileset_now_finished_2
+      name: tilesetcandy_3
       rect:
         serializedVersion: 2
         x: 96
@@ -219,18 +216,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 957dcba8583502410800000000000000
-      internalID: 1450250913036687193
+      spriteID: 1e8659c3d29bb20f0800000000000000
+      internalID: -1140614476667197215
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt_tileset_now_finished_3
+      name: tilesetcandy_4
       rect:
         serializedVersion: 2
-        x: 128
-        y: 96
+        x: 0
+        y: 64
         width: 32
         height: 32
       alignment: 0
@@ -240,56 +237,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d33800c6c6854ca90800000000000000
-      internalID: -7294608273741675715
+      spriteID: 9e0e795f60fb42720800000000000000
+      internalID: 2820589303251853545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt_tileset_now_finished_4
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fd986c29dc4c6e240800000000000000
-      internalID: 4820756838356519391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dirt_tileset_now_finished_5
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 96
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7dfa4cc58cab93c0800000000000000
-      internalID: -4351694924265357956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dirt_tileset_now_finished_6
+      name: tilesetcandy_5
       rect:
         serializedVersion: 2
         x: 32
@@ -303,14 +258,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8a25b22f1aa2c5c0800000000000000
-      internalID: -4196604852052874611
+      spriteID: f04ade609937d0bc0800000000000000
+      internalID: -3815266208229514225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt_tileset_now_finished_7
+      name: tilesetcandy_6
       rect:
         serializedVersion: 2
         x: 64
@@ -324,14 +279,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e607f8184f8161a70800000000000000
-      internalID: 8797246360539590766
+      spriteID: 4ca43c4cf2dea7240800000000000000
+      internalID: 4790401943082322628
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt_tileset_now_finished_8
+      name: tilesetcandy_7
       rect:
         serializedVersion: 2
         x: 96
@@ -345,18 +300,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae9ce7eadd6416370800000000000000
-      internalID: 8314004305031907818
+      spriteID: 212ef6676e64f1030800000000000000
+      internalID: 3467568193742037522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt_tileset_now_finished_9
+      name: tilesetcandy_8
       rect:
         serializedVersion: 2
-        x: 128
-        y: 64
+        x: 0
+        y: 32
         width: 32
         height: 32
       alignment: 0
@@ -366,56 +321,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 28518092630249d60800000000000000
-      internalID: 7895971463676040578
+      spriteID: 92c270756df566160800000000000000
+      internalID: 7018402443491224617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt_tileset_now_finished_10
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ae40ffab88dd29a80800000000000000
-      internalID: -8461457170553174806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dirt_tileset_now_finished_11
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 64
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6094c0c5f6cf38910800000000000000
-      internalID: 1838590628113172742
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dirt_tileset_now_finished_12
+      name: tilesetcandy_9
       rect:
         serializedVersion: 2
         x: 32
@@ -429,14 +342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 90c8ec8fc1001efb0800000000000000
-      internalID: -4620411618272048119
+      spriteID: 3af7e0f3330ba9980800000000000000
+      internalID: -8531312809952247901
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt_tileset_now_finished_13
+      name: tilesetcandy_10
       rect:
         serializedVersion: 2
         x: 64
@@ -450,14 +363,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4db479c827d8b09d0800000000000000
-      internalID: -2806994419610858540
+      spriteID: f3ee435014ef12690800000000000000
+      internalID: -7628536738575225281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt_tileset_now_finished_14
+      name: tilesetcandy_11
       rect:
         serializedVersion: 2
         x: 96
@@ -471,18 +384,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f7d4d12e98af3960800000000000000
-      internalID: 7583965694641100785
+      spriteID: 414f27cdeacfc2f10800000000000000
+      internalID: 2246448142104065044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt_tileset_now_finished_15
+      name: tilesetcandy_12
       rect:
         serializedVersion: 2
-        x: 128
-        y: 32
+        x: 0
+        y: 0
         width: 32
         height: 32
       alignment: 0
@@ -492,56 +405,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7619f399ba8e228f0800000000000000
-      internalID: -566634779387129497
+      spriteID: cabd2b2feac550260800000000000000
+      internalID: 7063153497066363820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt_tileset_now_finished_16
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a089a1df15b2831a0800000000000000
-      internalID: -6829661203768633334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dirt_tileset_now_finished_17
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 32
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c511b8095df8039c0800000000000000
-      internalID: -3949498725788085924
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dirt_tileset_now_finished_18
+      name: tilesetcandy_13
       rect:
         serializedVersion: 2
         x: 32
@@ -555,14 +426,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1457aef09426f1460800000000000000
-      internalID: 7214593194009982273
+      spriteID: 4f9465b59a1cb2170800000000000000
+      internalID: 8154824483410430452
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt_tileset_now_finished_19
+      name: tilesetcandy_14
       rect:
         serializedVersion: 2
         x: 64
@@ -576,14 +447,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8e5cc53164615e00800000000000000
-      internalID: 1031716158321745550
+      spriteID: cfdef797a35f075a0800000000000000
+      internalID: -6525446228564513284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: dirt_tileset_now_finished_20
+      name: tilesetcandy_15
       rect:
         serializedVersion: 2
         x: 96
@@ -597,71 +468,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1851ad42df2c4b820800000000000000
-      internalID: 2933183649825822081
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dirt_tileset_now_finished_21
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 919aadda7b3b14b80800000000000000
-      internalID: -8412245027474200295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dirt_tileset_now_finished_22
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9db26b4c90f3f0fc0800000000000000
-      internalID: -3526530672020280359
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: dirt_tileset_now_finished_23
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dcee41ce945955ff0800000000000000
-      internalID: -47968076291576115
+      spriteID: 81608bdb7fd82e680800000000000000
+      internalID: -8727257032711207400
       vertices: []
       indices: 
       edges: []
