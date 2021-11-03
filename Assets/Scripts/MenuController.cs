@@ -64,6 +64,7 @@ public class MenuController : MonoBehaviour
                     currentSelection[2].SetActive(false);
                     selectionPreviews[0].SetActive(true);
                     selectionPreviews[1].SetActive(false);
+                    selectionPreviews[2].SetActive(false);
                     break;
                 case 1:
                     currentSelection[0].SetActive(false);
@@ -71,6 +72,7 @@ public class MenuController : MonoBehaviour
                     currentSelection[2].SetActive(false);
                     selectionPreviews[0].SetActive(false);
                     selectionPreviews[1].SetActive(true);
+                    selectionPreviews[2].SetActive(false);
                     break;
                 case 2:
                     currentSelection[0].SetActive(false);
@@ -78,6 +80,7 @@ public class MenuController : MonoBehaviour
                     currentSelection[2].SetActive(true);
                     selectionPreviews[0].SetActive(false);
                     selectionPreviews[1].SetActive(false);
+                    selectionPreviews[2].SetActive(true);
                     break;
             }
             if (Input.GetKeyDown(KeyCode.S))
