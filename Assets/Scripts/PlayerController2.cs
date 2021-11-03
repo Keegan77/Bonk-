@@ -109,11 +109,11 @@ public class PlayerController2 : MonoBehaviour
 
         if (moveInput > 0)
         {
-            transform.eulerAngles = new Vector3(0, 0, 0);
+            transform.localScale = new Vector3(1, 1, 1);
         }
         else if (moveInput < 0)
         {
-            transform.eulerAngles = new Vector3(0, 180, 0);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
 
         //cool jump fall
