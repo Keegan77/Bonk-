@@ -33,12 +33,20 @@ public class PlayerController2 : MonoBehaviour
 
     public Transform player2Transform;
     public Transform player1Transform;
+
+    Animator animator;
+    GameObject GameManagerObj;
+    GameManager gameManager;
     //Gets Rigidbody component
     void Start()
     {
         
         rb = GetComponent<Rigidbody2D>();
-        hasPowerup=false;
+        animator = GetComponent<Animator>();
+        GameManagerObj = GameObject.FindGameObjectWithTag("gamemanager");
+        gameManager = GameManagerObj.GetComponent<GameManager>();
+
+        hasPowerup =false;
     }
 
     //Moves player on x axis
@@ -154,5 +162,6 @@ public class PlayerController2 : MonoBehaviour
                 isJumping = false;
             }
         }
+        animator.SetBool("Invincible", gameManager.player2died);
     }
 }

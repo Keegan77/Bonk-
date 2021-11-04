@@ -13,6 +13,9 @@ TagManager:
   - Btele
   - Fireball
   - Shot
+  - Player1Feet
+  - Player2Feet
+  - gamemanager
   layers:
   - Default
   - TransparentFX

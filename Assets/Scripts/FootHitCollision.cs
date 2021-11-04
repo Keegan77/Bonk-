@@ -41,7 +41,7 @@ public class FootHitCollision : MonoBehaviour
         }
         
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         Rigidbody2D otherrb;
 
@@ -65,4 +65,5 @@ public class FootHitCollision : MonoBehaviour
             //player1.transform.Translate(new Vector3((p1transform.position.x + p2transform.position.x), p1transform.position.y), 0);
         }
     }
+    
 }

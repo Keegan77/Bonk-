@@ -30,10 +30,17 @@ public class PlayerController : MonoBehaviour
     private float xlimit = 9.5f;
     public float maxYVelocity = -50;
 
+    Animator animator;
+    GameObject GameManagerObj;
+    GameManager gameManager;
+
     //Gets Rigidbody component
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+        GameManagerObj = GameObject.FindGameObjectWithTag("gamemanager");
+        gameManager = GameManagerObj.GetComponent<GameManager>();
     }
 
     //Moves player on x axis
@@ -112,5 +119,7 @@ public class PlayerController : MonoBehaviour
                 isJumping = false;
             }
         }
+
+        animator.SetBool("invincible", gameManager.player1died);
     }
 }

@@ -924,7 +924,7 @@ GameObject:
   - component: {fileID: 1055005607}
   m_Layer: 0
   m_Name: God
-  m_TagString: Untagged
+  m_TagString: gamemanager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -952,6 +952,9 @@ MonoBehaviour:
   p2scoreDeath: 0
   p1ScoreText: {fileID: 569284249}
   p2ScoreText: {fileID: 1230428311}
+  justDied: 0
+  feetPosPlayer1Coll: {fileID: 0}
+  feetPosPlayer2Coll: {fileID: 0}
 --- !u!4 &1055005608
 Transform:
   m_ObjectHideFlags: 0
