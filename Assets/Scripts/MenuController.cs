@@ -36,19 +36,23 @@ public class MenuController : MonoBehaviour
         {
             Application.Quit();
         }
-        if (Input.anyKeyDown && title)
+        //if (Input.anyKeyDown && title)
+        if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2))
         {
-            gameName.gameObject.SetActive(false);
-            pressAnyKey.gameObject.SetActive(false);
-            menu = true;
-
+            if (title)
+            {
+                gameName.gameObject.SetActive(false);
+                pressAnyKey.gameObject.SetActive(false);
+                menu = true;
+            }
         }
         if (menu)
         {
             currentTime -= Time.deltaTime;
             if (currentTime < 0)
             {
-                if (Input.anyKeyDown && Input.GetKeyDown(KeyCode.W) != true && Input.GetKeyDown(KeyCode.A) != true && Input.GetKeyDown(KeyCode.S) != true && Input.GetKeyDown(KeyCode.D) != true && Input.GetKeyDown(KeyCode.LeftArrow) != true && Input.GetKeyDown(KeyCode.RightArrow) != true && Input.GetKeyDown(KeyCode.UpArrow) != true && Input.GetKeyDown(KeyCode.DownArrow) != true)
+                //if (Input.anyKeyDown && Input.GetKeyDown(KeyCode.W) != true && Input.GetKeyDown(KeyCode.A) != true && Input.GetKeyDown(KeyCode.S) != true && Input.GetKeyDown(KeyCode.D) != true && Input.GetKeyDown(KeyCode.LeftArrow) != true && Input.GetKeyDown(KeyCode.RightArrow) != true && Input.GetKeyDown(KeyCode.UpArrow) != true && Input.GetKeyDown(KeyCode.DownArrow) != true)
+                if (Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2))
                 {
                     SceneManager.LoadScene(selection + 1);
                     
@@ -87,11 +91,11 @@ public class MenuController : MonoBehaviour
                     selectionPreviews[2].SetActive(true);
                     break;
             }
-            if (Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
             {
                 selection++;
             }
-            if (Input.GetKeyDown(KeyCode.W))
+            if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
             {
                 selection--;
             }

@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
         if (hasFirePower)
         {
             fireCooldownCurrent -= Time.deltaTime;
-            if (Input.GetKeyDown(KeyCode.V))
+            if (Input.GetKeyDown(KeyCode.V) || Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.X))
             {
                 if (transform.localScale.x == 1 && fireCooldownCurrent < 0)
                 {
@@ -155,26 +155,30 @@ public class PlayerController : MonoBehaviour
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
             }
 
-            else if (rb.velocity.y > 0 && Input.GetKey(KeyCode.Space))
+            if (rb.velocity.y > 0)
             {
+                if (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Z))
+                {
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+                }
+                
             }
-            //fixed double jump bug
-            if (Input.GetKeyUp(KeyCode.Space))
+        //fixed double jump bug
+            if (Input.GetKeyUp(KeyCode.Space) || Input.GetKeyUp(KeyCode.Z))
             {
                 isJumping = false;
             }
 
             //lets player jump
 
-            if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) && isJumping == false)
+            if (isGrounded == true && (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Z)) && isJumping == false)
             {
                 isJumping = true;
                 jumpTimeCounter = jumpTime;
                 rb.velocity = Vector2.up * jumpForce;
             }
             //makes you jump higher when you hold down space
-            if (Input.GetKey(KeyCode.Space) && isJumping == true)
+            if ((Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.Z)) && isJumping == true)
             {
                 if (jumpTimeCounter > 0)
                 {
