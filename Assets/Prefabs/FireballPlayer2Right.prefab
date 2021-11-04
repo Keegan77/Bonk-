@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 8396213005090715672}
   - component: {fileID: 8396213005090715675}
-  - component: {fileID: 8396213005090715674}
   - component: {fileID: 462506243}
+  - component: {fileID: -1780595536944210927}
   m_Layer: 0
-  m_Name: Square
-  m_TagString: Shot
+  m_Name: FireballPlayer2Right
+  m_TagString: Fireball
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8396213005090716133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.59, y: -2.91, z: 0}
-  m_LocalScale: {x: 0.4208, y: 0.4208, z: 1}
+  m_LocalPosition: {x: -3.5634, y: -2.6644, z: 0}
+  m_LocalScale: {x: 4.84987, y: 4.84987, z: 11.525356}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -70,10 +70,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 767275881
+  m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d0133940fe3fcf64f85c7bcbededfd3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,21 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8396213005090715674
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8396213005090716133}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 357d0608beaed274baed185ed34842a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player1: {fileID: 1923887814710118863, guid: 53dff2a7bd7cab94bb4ca12fb270a77c, type: 3}
-  playerController: {fileID: 0}
-  speed: 3
 --- !u!61 &462506243
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -112,16 +97,29 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.0000053718686, y: 0.00015201606}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 0.08, y: 0.08}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.0824904, y: 0.08290766}
   m_EdgeRadius: 0
+--- !u!114 &-1780595536944210927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8396213005090716133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a77dc5a1319aa6b40b04a1321406d024, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 20

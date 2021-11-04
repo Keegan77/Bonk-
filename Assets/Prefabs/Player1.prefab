@@ -70,8 +70,8 @@ GameObject:
   - component: {fileID: 1923887814710118860}
   - component: {fileID: 1923887814710118861}
   - component: {fileID: 1923887814710118862}
+  - component: {fileID: -2889608726078620434}
   - component: {fileID: 1923887814710118833}
-  - component: {fileID: 8865130035982068494}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Player1
@@ -217,20 +217,10 @@ MonoBehaviour:
   fallMultiplier: 4
   lowJumpMultiplier: 5
   maxYVelocity: -30
---- !u!114 &1923887814710118833
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1923887814710118863}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 011d503941e99d1449bdebcfe6601132, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCollider: {fileID: 1923887814710118861}
---- !u!95 &8865130035982068494
+  hasFirePower: 0
+  Fireball: {fileID: 8396213005090716133, guid: 872b96555532d8944beed7e340398f95, type: 3}
+  FireballLeft: {fileID: 8396213005090716133, guid: 5b25f8ef10974bc4e996bc2be2a72426, type: 3}
+--- !u!95 &-2889608726078620434
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -249,6 +239,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1923887814710118833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1923887814710118863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011d503941e99d1449bdebcfe6601132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCollider: {fileID: 1923887814710118861}
 --- !u!1001 &6574238987191380209
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class Player2OneWayPlatform : MonoBehaviour
     [SerializeField] private BoxCollider2D playerCollider;
     private BoxCollider2D headCollider;
     GameObject head;
+    BoxCollider2D platformcolliderhead;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +34,8 @@ public class Player2OneWayPlatform : MonoBehaviour
         if (collision.gameObject.CompareTag("Platform"))
         {
             currentOneWayPlatform = collision.gameObject;
+            platformcolliderhead = currentOneWayPlatform.GetComponent<BoxCollider2D>();
+            Physics2D.IgnoreCollision(headCollider, platformcolliderhead);
         }
     }
 

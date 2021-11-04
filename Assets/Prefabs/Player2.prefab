@@ -70,8 +70,8 @@ GameObject:
   - component: {fileID: 2213780174652651885}
   - component: {fileID: 2213780174652651884}
   - component: {fileID: 2213780174652651883}
-  - component: {fileID: 2213780174652651872}
   - component: {fileID: -1005533819654297583}
+  - component: {fileID: 2213780174652651872}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player2
@@ -217,22 +217,11 @@ MonoBehaviour:
   fallMultiplier: 4
   lowJumpMultiplier: 5
   maxYVelocity: -30
-  hasPowerup: 1
+  hasFirePower: 0
   player2Transform: {fileID: 2213780174652651887}
   player1Transform: {fileID: 1923887814710118834, guid: 53dff2a7bd7cab94bb4ca12fb270a77c, type: 3}
---- !u!114 &2213780174652651872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2213780174652651882}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 786fb31261cbfba44aaeecb867432b8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCollider: {fileID: 2213780174652651884}
+  Fireball: {fileID: 8396213005090716133, guid: b8e0cd6ad7b6e6e47b17db94cc75f357, type: 3}
+  FireballLeft: {fileID: 8396213005090716133, guid: a712b78c87133fc4f83445a6a19bb83d, type: 3}
 --- !u!95 &-1005533819654297583
 Animator:
   serializedVersion: 3
@@ -252,6 +241,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2213780174652651872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2213780174652651882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 786fb31261cbfba44aaeecb867432b8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCollider: {fileID: 2213780174652651884}
 --- !u!1001 &3357274198326258008
 PrefabInstance:
   m_ObjectHideFlags: 0

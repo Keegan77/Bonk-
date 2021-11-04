@@ -16,6 +16,7 @@ TagManager:
   - Player1Feet
   - Player2Feet
   - gamemanager
+  - FireUp
   layers:
   - Default
   - TransparentFX

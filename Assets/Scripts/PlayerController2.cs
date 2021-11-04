@@ -29,24 +29,37 @@ public class PlayerController2 : MonoBehaviour
     private float ylimit = 7;
     private float xlimit = 9.5f;
     public float maxYVelocity = -50;
-    public bool hasPowerup=false;
+    public bool hasFirePower = false;
+    bool gotPowerUp = false;
+
+    float firePowerCurrentTime;
+    float firePowerStartingTime = 8;
 
     public Transform player2Transform;
     public Transform player1Transform;
 
+    float fireCooldownCurrent;
+    float fireCooldownStarting = .75f;
+
     Animator animator;
     GameObject GameManagerObj;
     GameManager gameManager;
+    public GameObject Fireball;
+    public GameObject FireballLeft;
     //Gets Rigidbody component
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     void Start()
     {
         
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        
         GameManagerObj = GameObject.FindGameObjectWithTag("gamemanager");
         gameManager = GameManagerObj.GetComponent<GameManager>();
-
-        hasPowerup =false;
+        hasFirePower = false;
     }
 
     //Moves player on x axis
@@ -60,41 +73,54 @@ public class PlayerController2 : MonoBehaviour
     //Fireball interation
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Fireball"))
+        if (other.CompareTag("FireUp"))
         {
-            hasPowerup=true;
-            
+            gotPowerUp = true;
+
             Destroy(other.gameObject);
-            
+
             Debug.Log("Power up Pick up!");
-            
-    }   }
-    private void OnCollisonEnter2D(Collider collision)
-    {
-        Debug.Log("Test");
-        if (collision.gameObject.CompareTag("Player1")&& hasPowerup)
-        {
-            
-            Rigidbody2D Player1Rb= collision.gameObject.GetComponent<Rigidbody2D>();
-            if (player2Transform.position.x > player1Transform.position.x) {
-                Player1Rb.velocity = Vector2.left * 19;
-            }
-            else if (player2Transform.position.x < player1Transform.position.x) {
-                Player1Rb.velocity = Vector2.right * 19;
-            }
-            //Vector2 awayPlayer2= collision.gameObject.transform.position+transform.position;
-            //Player1Rb.AddForce(awayPlayer2*100,ForceMode2D.Impulse);
-            //Player1Rb.velocity
+
         }
-    }
+    }   
     
     void Update()
     {
         //powerups
-        if (hasPowerup) {
-
+        print(animator);
+        firePowerCurrentTime -= Time.deltaTime;
+        //print(firePowerCurrentTime);
+        //Debug.Log(rb.velocity.y);
+        if (gotPowerUp == true)
+        {
+            firePowerCurrentTime = firePowerStartingTime;
+            hasFirePower = true;
+            fireCooldownCurrent = 0;
+            gotPowerUp = false;
         }
-        
+        if (hasFirePower)
+        {
+            fireCooldownCurrent -= Time.deltaTime;
+            if (Input.GetKeyDown(KeyCode.Alpha5))
+            {
+                if (transform.localScale.x == 1 && fireCooldownCurrent < 0)
+                {
+                    Instantiate(Fireball, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+                    fireCooldownCurrent = fireCooldownStarting;
+                }
+                else if (transform.localScale.x == -1 && fireCooldownCurrent < 0)
+                {
+                    Instantiate(FireballLeft, new Vector3(transform.position.x, transform.position.y, transform.position.z), transform.rotation);
+                    fireCooldownCurrent = fireCooldownStarting;
+                }
+
+                if (firePowerCurrentTime < 0)
+                {
+                    hasFirePower = false;
+                }
+            }
+        }
+
         //Debug.Log(rb.velocity.y);
         if (rb.velocity.y < maxYVelocity)
         {

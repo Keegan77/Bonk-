@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8413446558891633485
+--- !u!1 &3002763063221368250
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8413446558891633475}
-  - component: {fileID: 8413446558891633484}
+  - component: {fileID: 3002763063221368244}
+  - component: {fileID: 3002763063221368251}
   m_Layer: 0
   m_Name: God
-  m_TagString: Untagged
+  m_TagString: gamemanager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8413446558891633475
+--- !u!4 &3002763063221368244
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8413446558891633485}
+  m_GameObject: {fileID: 3002763063221368250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.37142584, y: 1.1736311, z: -17.408731}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,13 +31,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8413446558891633484
+--- !u!114 &3002763063221368251
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8413446558891633485}
+  m_GameObject: {fileID: 3002763063221368250}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8ff434ba7d1d61f4b80a6f40d9cbf1bf, type: 3}
@@ -54,3 +54,12 @@ MonoBehaviour:
   p2scoreDeath: 0
   p1ScoreText: {fileID: 0}
   p2ScoreText: {fileID: 0}
+  justDied: 0
+  player2died: 0
+  player1died: 0
+  FireballEmblem: {fileID: 8969860564746883778, guid: a137dae1fd60b8248b56308cd596326c, type: 3}
+  powerUpSpawner: {fileID: 0}
+  powerUpSpawner2: {fileID: 0}
+  powerUpSpawner3: {fileID: 0}
+  feetPosPlayer1Coll: {fileID: 0}
+  feetPosPlayer2Coll: {fileID: 0}

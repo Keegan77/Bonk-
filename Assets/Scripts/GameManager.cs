@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
 
     public Transform Spawner1;
     public Transform Spawner2;
-    
+
     public int p1Score;
     public int p1scoreDeath;
 
@@ -29,11 +29,20 @@ public class GameManager : MonoBehaviour
     public bool player2died = false;
     public bool player1died = false;
     bool startTimer = false;
+    bool spawned;
     float currentTime;
     float startingTime = 1.5f;
 
+    float powerSpawnTimeStart = 30;
+    float currentPowerSpawnTime = 15;
+
     GameObject feetPosPlayer1;
     GameObject feetPosPlayer2;
+    public GameObject FireballEmblem;
+
+    public Transform powerUpSpawner;
+    public Transform powerUpSpawner2;
+    public Transform powerUpSpawner3;
 
     public BoxCollider2D feetPosPlayer1Coll;
     public BoxCollider2D feetPosPlayer2Coll;
@@ -47,6 +56,32 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        currentPowerSpawnTime -= Time.deltaTime;
+        //print(currentPowerSpawnTime);
+        if (currentPowerSpawnTime < 0)
+        {
+            spawned = true;
+            currentPowerSpawnTime = powerSpawnTimeStart;
+        }
+        if (spawned)
+        {
+            int r = Random.Range(0, 3);
+            switch (r)
+            {
+                case 0:
+                    Instantiate(FireballEmblem, new Vector3(powerUpSpawner.position.x, powerUpSpawner.position.y, powerUpSpawner.position.z), transform.rotation);
+                    break;
+                case 1:
+                    Instantiate(FireballEmblem, new Vector3(powerUpSpawner2.position.x, powerUpSpawner2.position.y, powerUpSpawner2.position.z), transform.rotation);
+                    break;
+                case 2:
+                    Instantiate(FireballEmblem, new Vector3(powerUpSpawner3.position.x, powerUpSpawner3.position.y, powerUpSpawner3.position.z), transform.rotation);
+                    break;
+            }
+            print(r);
+            
+            spawned = false;
+        }
         //Debug.Log(p1scoreDeath);
         feetPosPlayer1 = GameObject.FindGameObjectWithTag("Player1Feet");
         feetPosPlayer2 = GameObject.FindGameObjectWithTag("Player2Feet");
@@ -123,17 +158,18 @@ public class GameManager : MonoBehaviour
         {
             if (player2died)
             {
-                feetPosPlayer1Coll.isTrigger = false;
-                player2.layer = 8;
+                //feetPosPlayer1Coll.isTrigger = false;
+                //player2.layer = 8;
             }
-            else player2.layer = 0;
+            //else player2.layer = 0;
             if (player1died)
             {
-                feetPosPlayer2Coll.isTrigger = false;
-                player1.layer = 8;
+                //feetPosPlayer2Coll.isTrigger = false;
+                //player1.layer = 8;
             }
-            else player1.layer = 0;
+            //else //player1.layer = 0;
         }
+
 
     }
     private IEnumerator RespawnPlayer(string player)

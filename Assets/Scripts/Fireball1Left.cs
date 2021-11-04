@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Fireball : MonoBehaviour
+public class Fireball1Left : MonoBehaviour
 {
-
     // Start is called before the first frame update
-    public float speed=20.0f;
-    
+    public float speed = 20.0f;
+
     GameObject gameManagerObj;
     GameManager gameManager;
     BoxCollider2D fireballcollider;
@@ -29,19 +28,20 @@ public class Fireball : MonoBehaviour
     void Update()
     {
         transform.Rotate(0, 0, -2f, Space.Self);
-        transform.Translate((Vector2.right * 3) * Time.deltaTime, Space.World);
+
+        transform.Translate((Vector2.left * 3) * Time.deltaTime, Space.World);
 
         if (transform.position.x > 10 || transform.position.x < -10)
         {
             Destroy(gameObject);
         }
-        
-     }
+
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
 
-        if(other.CompareTag("Player2"))
+        if (other.CompareTag("Player2"))
         {
             if (gameManager.player2died == false)
             {
@@ -50,8 +50,7 @@ public class Fireball : MonoBehaviour
             }
             Destroy(gameObject);
         }
+
     }
-    
-    
-    
+
 }

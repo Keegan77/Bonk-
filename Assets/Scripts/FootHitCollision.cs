@@ -49,18 +49,26 @@ public class FootHitCollision : MonoBehaviour
 
         if (collision.CompareTag("Head"))
         {
-            gameManager.p2Score++;
+            
             p2rb.velocity = Vector2.up * jumpForce;
-            Destroy(player1);
+            if (gameManager.player1died == false)
+            {
+                gameManager.p2Score++;
+                Destroy(player1);
+            }
             //p2rb.velocity = new Vector2((p1transform.position.x + p2transform.position.x) * 10, p2rb.velocity.y);
             //player2.transform.Translate(new Vector3((p1transform.position.x + p2transform.position.x), p2transform.position.y), 0);
         }
 
         if (collision.CompareTag("Head2"))
         {
-            gameManager.p1Score++;
             p1rb.velocity = Vector2.up * jumpForce;
-            Destroy(player2);
+            if (gameManager.player2died == false)
+            {
+                gameManager.p1Score++;
+                Destroy(player2);
+            }
+            
             //p1rb.velocity = new Vector2((p1transform.position.x + p2transform.position.x) * 10, p1rb.velocity.y);
             //player1.transform.Translate(new Vector3((p1transform.position.x + p2transform.position.x), p1transform.position.y), 0);
         }
