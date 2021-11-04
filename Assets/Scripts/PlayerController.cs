@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
     public float fallMultiplier;
     public float lowJumpMultiplier;
 
-    private float ylimit = 7;
+    private float ylimit = 5.5f;
     private float xlimit = 9.5f;
     public float maxYVelocity = -50;
     public bool hasFirePower = false;
@@ -124,6 +124,10 @@ public class PlayerController : MonoBehaviour
             {
                 transform.position = new Vector3(transform.position.x, ylimit, transform.position.z);
             }
+            if (transform.position.y > ylimit)
+            {
+            transform.position = new Vector3(transform.position.x, -ylimit, transform.position.z);
+            }
             if (transform.position.x > xlimit)
             {
                 transform.position = new Vector3(-xlimit, transform.position.y, transform.position.z);
@@ -184,7 +188,7 @@ public class PlayerController : MonoBehaviour
             }
 
             animator.SetBool("invincible", gameManager.player1died);
-
+            animator.SetBool("fire", hasFirePower);
         
     }
 }

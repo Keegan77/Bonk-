@@ -50,12 +50,16 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
         currentPowerSpawnTime -= Time.deltaTime;
         //print(currentPowerSpawnTime);
         if (currentPowerSpawnTime < 0)
@@ -126,7 +130,7 @@ public class GameManager : MonoBehaviour
 
         if (gameWon)
         {
-            if (Input.anyKeyDown && Input.GetKeyDown(KeyCode.Space) != true && Input.GetKeyDown(KeyCode.W) != true && Input.GetKeyDown(KeyCode.A) != true && Input.GetKeyDown(KeyCode.S) != true && Input.GetKeyDown(KeyCode.D) != true && Input.GetKeyDown(KeyCode.Alpha4) != true && Input.GetKeyDown(KeyCode.UpArrow) != true && Input.GetKeyDown(KeyCode.LeftArrow) != true && Input.GetKeyDown(KeyCode.RightArrow) != true && Input.GetKeyDown(KeyCode.DownArrow) != true && Input.GetKeyDown(KeyCode.Keypad4) != true)
+            if (Input.anyKeyDown && Input.GetKeyDown(KeyCode.Space) != true && Input.GetKeyDown(KeyCode.W) != true && Input.GetKeyDown(KeyCode.A) != true && Input.GetKeyDown(KeyCode.S) != true && Input.GetKeyDown(KeyCode.D) != true && Input.GetKeyDown(KeyCode.Alpha4) != true && Input.GetKeyDown(KeyCode.UpArrow) != true && Input.GetKeyDown(KeyCode.LeftArrow) != true && Input.GetKeyDown(KeyCode.RightArrow) != true && Input.GetKeyDown(KeyCode.DownArrow) != true && Input.GetKeyDown(KeyCode.V) != true && Input.GetKeyDown(KeyCode.Alpha5) != true)
             {
                 SceneManager.LoadScene(0);
             }

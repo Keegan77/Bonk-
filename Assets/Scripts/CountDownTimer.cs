@@ -37,6 +37,7 @@ public class CountDownTimer : MonoBehaviour
         
         if (currentTime < 1 && currentTime > -1)
         {
+
             countdownText.text = "GO!";
             spawnInt += 1;
 
