@@ -161,7 +161,7 @@ public class PlayerController2 : MonoBehaviour
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
 
-        if (rb.velocity.y > 0 && Input.GetKey(KeyCode.Alpha4))
+        if (rb.velocity.y > 0)
         {
             if (Input.GetKey(KeyCode.Alpha4) || Input.GetKey(KeyCode.K))
             {
