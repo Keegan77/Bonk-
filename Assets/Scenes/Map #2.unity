@@ -2702,6 +2702,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1850864534511953335, guid: cf925652f856c7f469157c0388fbe694, type: 3}
+      propertyPath: m_Text
+      value: press enter to return to the menu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1850864534511953335, guid: cf925652f856c7f469157c0388fbe694, type: 3}
       propertyPath: m_Color.b
       value: 0.3066038
       objectReference: {fileID: 0}
