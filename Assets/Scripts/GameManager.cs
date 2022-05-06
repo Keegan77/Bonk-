@@ -133,10 +133,10 @@ public class GameManager : MonoBehaviour
             //if (Input.anyKeyDown && Input.GetKeyDown(KeyCode.Space) != true && Input.GetKeyDown(KeyCode.W) != true && Input.GetKeyDown(KeyCode.A) != true && Input.GetKeyDown(KeyCode.S) != true && Input.GetKeyDown(KeyCode.D) != true && Input.GetKeyDown(KeyCode.Alpha4) != true && Input.GetKeyDown(KeyCode.UpArrow) != true && Input.GetKeyDown(KeyCode.LeftArrow) != true && Input.GetKeyDown(KeyCode.RightArrow) != true && Input.GetKeyDown(KeyCode.DownArrow) != true && Input.GetKeyDown(KeyCode.V) != true && Input.GetKeyDown(KeyCode.Alpha5) != true)
             if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Alpha1) || Input.GetKeyDown(KeyCode.Alpha2))
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(0); // This brings you back to the main menu
             }
         }
-
+        
         if (startTimer)
         {
             currentTime = startingTime;
